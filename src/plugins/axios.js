@@ -20,6 +20,13 @@ apiAuth.interceptors.request.use(config => {
   return config
 })
 
+// 1. getProfile
+// 2. 如果發生登入逾時錯誤
+// 3. 傳送舊換新請求
+// 4. 如果舊換新成功，修改 getProfile 請求的 jwt 後重新送出
+// 5. 如果舊換新失敗，將 getProfile 的錯誤回傳
+// 6. 如果不是登入逾時錯誤，將 getProfile 的錯誤回傳
+// axios.interceptors.response.use(成功執行的 function, 失敗執行的 function)
 apiAuth.interceptors.response.use(res => {
   return res
 }, error => {

@@ -2,11 +2,11 @@
   <VContainer>
     <VRow>
       <VCol cols="12">
-        <h1 class="text-center">商品管理</h1>
+        <h1 class="text-center">菜單管理</h1>
       </VCol>
       <VDivider></VDivider>
       <VCol cols="12">
-        <VBtn color="green" @click="openDialog">新增商品</VBtn>
+        <VBtn color="green" @click="openDialog">新增</VBtn>
         <VDataTableServer v-model:items-per-page="tableItemsPerPage" v-model:sort-by="tableSortBy"
           v-model:page="tablePage" :items="tableProducts" :headers="tableHeaders" :loading="tableLoading"
           :items-length="tableItemsLength" :search="tableSearch" hover @update:items-per-page="tableLoadItems"
@@ -114,6 +114,7 @@ const tableLoadItems = async () => {
     tableProducts.value.splice(0, tableProducts.value.length, ...data.result.data)
     tableItemsLength.value = data.result.count
   } catch (error) {
+    console.log(error)
     createSnackbar({
       text: error.response.data.message,
       showCloseButton: false,
@@ -156,7 +157,7 @@ const closeDialog = () => {
 }
 
 // 表單
-const categories = ['衣服', '食品', '3C', '遊戲']
+const categories = ['開胃小食', '生食&沙拉', '酒桃塔可', '燒物', '揚物', '食事&吸物', '甜點', '夜場限定', '酒']
 const schema = yup.object({
   name: yup
     .string()
@@ -237,4 +238,5 @@ const submit = handleSubmit(async (values) => {
     })
   }
 })
+
 </script>
