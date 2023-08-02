@@ -13,6 +13,8 @@ import { createVuetify } from 'vuetify'
 
 import { VDataTableServer } from 'vuetify/labs/VDataTable'
 
+// import DayJsAdapter from '@date-io/dayjs'
+
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   components: {
