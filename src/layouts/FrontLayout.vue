@@ -40,6 +40,11 @@
   <v-main>
     <router-view></router-view>
   </v-main>
+  <v-container-fluid class="SakeFooter">
+    <v-row>
+      <v-col></v-col>
+    </v-row>
+  </v-container-fluid>
 </template>
 
 <script setup>

@@ -11,6 +11,7 @@
   "dependencies": {
     "@boindil/vue-file-agent-next": "^1.0.5",
     "@mdi/font": "7.0.96",
+    "@vuepic/vue-datepicker": "^5.4.0",
     "axios": "^1.4.0",
     "core-js": "^3.29.0",
     "pinia": "^2.0.0",
@@ -21,7 +22,7 @@
     "vu": "^0.0.0",
     "vue": "^3.2.0",
     "vue-router": "^4.2.4",
-    "vuetify": "^3.0.0",
+    "vuetify": "^3.2.0",
     "vuetify-use-dialog": "^0.6.0",
     "webfontloader": "^1.0.0",
     "yup": "^1.2.0"

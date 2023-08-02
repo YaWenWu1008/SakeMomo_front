@@ -13,10 +13,14 @@ import { createApp } from 'vue'
 // Plugins
 import { registerPlugins } from '@/plugins'
 
+import VueDatePicker from '@vuepic/vue-datepicker'
+import '@vuepic/vue-datepicker/dist/main.css'
+
 // styles
 import './assets/main.scss'
 
 const app = createApp(App)
+app.component('VueDatePicker', VueDatePicker)
 
 registerPlugins(app)
 
