@@ -12,7 +12,9 @@
               :error-messages="phoneNumber.errorMessage.value"></v-text-field>
             <v-select v-model="peopleNumber.value.value" :items="peopleNumberOptions" label="人數"
               :error-messages="peopleNumber.errorMessage.value"></v-select>
-            <vue-date-picker v-model="dateTime" label="日期" placeholder="日期 & 時間" dark></vue-date-picker>
+            <vue-date-picker v-model="dateTime" label="日期" placeholder="日期 & 時間" dark time-picker-inline
+              :min-time="{ hours: 18, minutes: 0 }" :max-time="{ hours: 23, minutes: 0 }"
+              :day-names="['一', '二', '三', '四', '五', '六', '日']"></vue-date-picker>
             <!-- <v-select v-model="selectedTime" :items="timeOptions" label="時間"></v-select> -->
             <div class="text-center">
               <v-btn type="submit" @submit="submit" :disabled="isSubmitting" color="primary">送出</v-btn>
@@ -42,7 +44,7 @@ const schema = yup.object({
   name: yup.string().required('姓名必填'),
   phoneNumber: yup.string().required('手機號碼必填').matches(/^09\d{8}$/, '手機格式錯誤'),
   peopleNumber: yup.number().required('人數必填'),
-  date: yup.string().required('日期、時間必填')
+  dateTime: yup.string().required('日期、時間必填')
 })
 
 const { handleSubmit, isSubmitting } = useForm({
@@ -52,7 +54,7 @@ const { handleSubmit, isSubmitting } = useForm({
 const name = useField('name')
 const phoneNumber = useField('phoneNumber')
 const peopleNumber = useField('peopleNumber')
-const dateTime = ref()
+const dateTime = ref(new Date())
 
 const submit = handleSubmit(async (values) => {
   try {
