@@ -41,8 +41,18 @@
     <router-view></router-view>
   </v-main>
   <v-container-fluid class="SakeFooter">
-    <v-row>
-      <v-col></v-col>
+    <v-row class="justify-space-between">
+      <v-col class="footerFollow">
+        <h4>FOLLOW US</h4>
+        <a href="https://www.facebook.com/1SakeMomo/?locale=zh_TW"><v-icon icon="mdi-facebook"></v-icon></a>
+        <a href="https://www.instagram.com/sakemomobistro/"><v-icon icon="mdi-instagram"></v-icon></a>
+      </v-col>
+      <v-col>
+        <a href="/"><img src="../assets/sakelogo.png"></a>
+      </v-col>
+      <v-col>
+        <a href="#"><v-icon icon="mdi-arrow-up-drop-circle-outline"></v-icon></a>
+      </v-col>
     </v-row>
   </v-container-fluid>
 </template>
