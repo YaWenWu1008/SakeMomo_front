@@ -53,7 +53,9 @@
           <a href="/"><img src="../assets/sakelogo.png"></a>
         </v-col>
         <v-col>
-          <a href="#"><v-icon icon="mdi-arrow-up-drop-circle-outline"></v-icon></a>
+          <v-btn variant="text" fab bottom right @click="scrollToTop">
+            <v-icon icon="mdi-arrow-up-drop-circle-outline"></v-icon>
+          </v-btn>
         </v-col>
       </v-row>
     </v-footer>
@@ -115,5 +117,12 @@ const logout = async () => {
       }
     })
   }
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // For smooth scrolling
+  })
 }
 </script>
