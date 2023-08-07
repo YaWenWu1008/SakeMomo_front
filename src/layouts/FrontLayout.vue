@@ -1,60 +1,63 @@
 <template>
-  <v-app-bar color="#863436">
-    <v-container class="d-flex align-center">
-      <v-btn to="/" :active="false">
-        <v-img src="../assets/sakelogo.png" :width="40"></v-img>
-      </v-btn>
-      <v-spacer></v-spacer>
-      <v-btn v-for="barItem in barItems" :key="barItem.to" :to="barItem.to">{{ barItem.text }}</v-btn>
-      <v-spacer></v-spacer>
-      <v-app-bar-nav-icon v-if="isMobile" @click="drawer = true"></v-app-bar-nav-icon>
-      <template v-if="!isMobile">
-        <template v-for="navItem in navItems" :key="navItem.to">
-          <v-btn variant="text" :prepend-icon="navItem.icon" :to="navItem.to" v-if="navItem.show">{{ navItem.text
-          }}</v-btn>
-        </template>
-      </template>
-      <v-btn v-if="!isMobile && isLogin" variant="text" prepend-icon="mdi-logout" @click="logout">登出</v-btn>
-    </v-container>
-  </v-app-bar>
-
-  <v-navigation-drawer v-if="isMobile" v-model="drawer" location="right" temporary>
-    <v-list nav>
-      <template v-for="navItem in navItems" :key="navItem.to">
-        <v-list-item v-if="navItem.show" :to="navItem.to">
-          <template #prepend>
-            <v-icon :icon="navItem.icon"></v-icon>
+  <v-app>
+    <v-app-bar color="#863436">
+      <v-container class="d-flex align-center">
+        <v-btn to="/" :active="false">
+          <v-img src="../assets/sakelogo.png" :width="40"></v-img>
+        </v-btn>
+        <v-spacer></v-spacer>
+        <v-btn v-for="barItem in barItems" :key="barItem.to" :to="barItem.to">{{ barItem.text }}</v-btn>
+        <v-spacer></v-spacer>
+        <v-app-bar-nav-icon v-if="isMobile" @click="drawer = true"></v-app-bar-nav-icon>
+        <template v-if="!isMobile">
+          <template v-for="navItem in navItems" :key="navItem.to">
+            <v-btn variant="text" :prepend-icon="navItem.icon" :to="navItem.to" v-if="navItem.show">{{ navItem.text
+            }}</v-btn>
           </template>
-          <v-list-item-title>{{ navItem.text }}</v-list-item-title>
-        </v-list-item>
-      </template>
-      <v-list-item v-if="isLogin" @click="logout">
-        <template #prepend>
-          <v-icon icon="mdi-logout"></v-icon>
         </template>
-        <v-list-item-title>登出</v-list-item-title>
-      </v-list-item>
-    </v-list>
-  </v-navigation-drawer>
+        <v-btn v-if="!isMobile && isLogin" variant="text" prepend-icon="mdi-logout" @click="logout">登出</v-btn>
+      </v-container>
+    </v-app-bar>
 
-  <v-main>
-    <router-view></router-view>
-  </v-main>
-  <v-container-fluid class="SakeFooter">
-    <v-row class="justify-space-between">
-      <v-col class="footerFollow">
-        <h4>FOLLOW US</h4>
-        <a href="https://www.facebook.com/1SakeMomo/?locale=zh_TW"><v-icon icon="mdi-facebook"></v-icon></a>
-        <a href="https://www.instagram.com/sakemomobistro/"><v-icon icon="mdi-instagram"></v-icon></a>
-      </v-col>
-      <v-col>
-        <a href="/"><img src="../assets/sakelogo.png"></a>
-      </v-col>
-      <v-col>
-        <a href="#"><v-icon icon="mdi-arrow-up-drop-circle-outline"></v-icon></a>
-      </v-col>
-    </v-row>
-  </v-container-fluid>
+    <v-navigation-drawer v-if="isMobile" v-model="drawer" location="right" temporary>
+      <v-list nav>
+        <template v-for="navItem in navItems" :key="navItem.to">
+          <v-list-item v-if="navItem.show" :to="navItem.to">
+            <template #prepend>
+              <v-icon :icon="navItem.icon"></v-icon>
+            </template>
+            <v-list-item-title>{{ navItem.text }}</v-list-item-title>
+          </v-list-item>
+        </template>
+        <v-list-item v-if="isLogin" @click="logout">
+          <template #prepend>
+            <v-icon icon="mdi-logout"></v-icon>
+          </template>
+          <v-list-item-title>登出</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-main>
+      <router-view></router-view>
+    </v-main>
+
+    <v-footer fixed class="SakeFooter">
+      <v-row class="justify-space-between">
+        <v-col class="footerFollow">
+          <h4>FOLLOW US</h4>
+          <a href="https://www.facebook.com/1SakeMomo/?locale=zh_TW"><v-icon icon="mdi-facebook"></v-icon></a>
+          <a href="https://www.instagram.com/sakemomobistro/"><v-icon icon="mdi-instagram"></v-icon></a>
+        </v-col>
+        <v-col>
+          <a href="/"><img src="../assets/sakelogo.png"></a>
+        </v-col>
+        <v-col>
+          <a href="#"><v-icon icon="mdi-arrow-up-drop-circle-outline"></v-icon></a>
+        </v-col>
+      </v-row>
+    </v-footer>
+  </v-app>
 </template>
 
 <script setup>

@@ -1,3 +1,7 @@
+// v-app {
+//   height: 100%;
+// }
+
 .menu {
   width: 100%;
   justify-content: center;
@@ -11,14 +15,18 @@
 }
 
 .SakeFooter {
-  height: 15%;
   background: #863436;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100px;
 
   .v-row {
     justify-content: space-between;
     text-align: center;
     align-items: center;
     height: 100%;
+    margin-top: 0.05%;
   }
 
   img {
@@ -41,4 +49,32 @@
       margin: 10px;
     }
   }
+}
+
+.homeTopImg {
+  background-image: url(../assets/banner.jpg);
+  height: 500px;
+  background-position: center 45%;
+  background-size: cover;
+}
+
+.space {
+  height: 10%;
+  width: 100%;
+}
+
+.homeInformation {
+  margin-bottom: 500px;
+
+  img {
+    width: 100%;
+  }
+
+  .homeInformationRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
 }
