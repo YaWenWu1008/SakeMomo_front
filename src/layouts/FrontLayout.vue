@@ -46,8 +46,9 @@
       <v-row class="justify-space-between">
         <v-col class="footerFollow">
           <h4>FOLLOW US</h4>
-          <a href="https://www.facebook.com/1SakeMomo/?locale=zh_TW"><v-icon icon="mdi-facebook"></v-icon></a>
-          <a href="https://www.instagram.com/sakemomobistro/"><v-icon icon="mdi-instagram"></v-icon></a>
+          <a href="https://www.facebook.com/1SakeMomo/?locale=zh_TW" target="_blank"><v-icon
+              icon="mdi-facebook"></v-icon></a>
+          <a href="https://www.instagram.com/sakemomobistro/" target="_blank"><v-icon icon="mdi-instagram"></v-icon></a>
         </v-col>
         <v-col>
           <a href="/"><img src="../assets/sakelogo.png"></a>
