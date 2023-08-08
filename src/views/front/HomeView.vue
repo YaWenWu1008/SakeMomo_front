@@ -9,7 +9,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" class="text-center">
-        <p>酒桃取名諧音「石頭」，正是期許能像石頭在歷經長時間的歲月風雨後，變得更加堅韌和耐久，創業者也需要在時間的考驗中，不斷磨練自己，將打造清酒界的「酒桃」烏托邦。</p>
+        <p data-aos="fade-up">酒桃取名諧音「石頭」，正是期許能像石頭在歷經長時間的歲月風雨後，變得更加堅韌和耐久，創業者也需要在時間的考驗中，不斷磨練自己，將打造清酒界的「酒桃」烏托邦。</p>
       </v-col>
     </v-row>
   </v-container>
@@ -17,18 +17,22 @@
   <v-container class="homeInformation text-center">
     <v-row class="homeInformationRow">
       <v-col cols="12" md="6">
-        <img src="../../assets/cheers.jpg">
+        <img src="../../assets/cheers.jpg" class="image1" data-aos="flip-left" dara-aos-offset="300"
+          data-aos-easing="ease-in-sine">
       </v-col>
       <v-col cols="12" md="6">
         <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
+        <v-btn to="/reservation" color="secondary">訂位</v-btn>
       </v-col>
     </v-row>
-    <v-row class="flex-wrap-reverse homeInformationRow">
-      <v-col cols="12" md="6">
-        <img src="../../assets/cheers.jpg" alt="">
+    <v-row class="flex-wrap flex-md-wrap-reverse homeInformationRow">
+      <v-col cols="12" md="6" class="order-sm-0">
+        <img src="../../assets/cheers.jpg" class="image1" data-aos="flip-left" dara-aos-offset="500"
+          data-aos-easing="ease-in-sine">
       </v-col>
-      <v-col cols="12" md="6" class="order-md-first order-lg-first">
+      <v-col cols="12" md="6" class=" order-md-first order-lg-first">
         <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
+        <v-btn to="/menu" color="secondary" data-aos="fade-right">Menu</v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -56,17 +60,23 @@
           <span>SUN-THU : 18:00 ~ 00:00</span>
         </div>
       </v-col>
-      <iframe
+      <!-- <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9583868108703!2d121.55445587600065!3d25.03548623823055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab22532c8b1b%3A0x5456aa82472b085!2z6YWS5qGDU2FrZSBtb21v!5e0!3m2!1szh-TW!2stw!4v1691407659694!5m2!1szh-TW!2stw"
         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
     </v-row>
 
   </v-container>
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
+  mounted() {
+    AOS.init()
+  },
   data() {
     return {
       items: [
@@ -92,4 +102,5 @@ export default {
     }
   }
 }
+
 </script>
