@@ -10,14 +10,14 @@
   </v-container>
 
   <v-container>
-    <v-row>
-      <v-col>
+    <v-row class="text-center">
+      <v-col class="aboutCol2">
         <h1>來店須知</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fugiat, magni, officiis dicta quaerat,
           dolorum numquam asperiores inventore repellat libero reiciendis nam hic voluptate. Aut aspernatur similique
           culpa saepe exercitationem.</p>
       </v-col>
-      <v-col><img src="../../assets/cheers.jpg"></v-col>
+      <v-col class="aboutCol2"><img src="../../assets/cheers.jpg"></v-col>
     </v-row>
   </v-container>
 </template>

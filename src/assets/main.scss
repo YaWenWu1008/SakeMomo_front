@@ -49,7 +49,7 @@
 
 .homeTopImg {
   background-image: url(../assets/banner.jpg);
-  height: 500px;
+  height: 650px;
   background-position: center 45%;
   background-size: cover;
 }
@@ -107,7 +107,22 @@
 
 }
 
-.aboutCol p {
-  text-align: center;
-  margin: 15px;
+.aboutCol {
+  margin-bottom: 100px;
+
+  p {
+    text-align: center;
+    margin: 15px;
+  }
+}
+
+.aboutCol2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
 }

@@ -6,7 +6,7 @@
       </v-col>
       <v-col>
         <v-sheet width="450" class="mx-auto">
-          <v-form>
+          <!-- <v-form :disabled="isSubmitting" @submit.prevent="submit">
             <v-text-field label="姓名" v-model="name.value.value" :error-messages="name.errorMessage.value"></v-text-field>
             <v-text-field label="手機號碼" v-model="phoneNumber.value.value"
               :error-messages="phoneNumber.errorMessage.value"></v-text-field>
@@ -15,11 +15,25 @@
             <vue-date-picker v-model="dateTime" label="日期" placeholder="日期 & 時間" dark time-picker-inline
               :min-time="{ hours: 18, minutes: 0 }" :max-time="{ hours: 23, minutes: 0 }"
               :day-names="['一', '二', '三', '四', '五', '六', '日']"></vue-date-picker>
-            <!-- <v-select v-model="selectedTime" :items="timeOptions" label="時間"></v-select> -->
+
             <div class="text-center">
-              <v-btn type="submit" @submit="submit" :disabled="isSubmitting" color="primary">送出</v-btn>
+              <v-btn type="submit" color="primary">送出</v-btn>
             </div>
-          </v-form>
+          </v-form> -->
+          <VForm :disabled="isSubmitting" @submit.prevent="submit">
+            <VTextField v-model="name.value.value" :error-messages="name.errorMessage.value" label="姓名" counter
+              maxlength="20"></VTextField>
+            <VTextField v-model="phoneNumber.value.value" :error-messages="phoneNumber.errorMessage.value" label="手機號碼">
+            </VTextField>
+            <v-select v-model="peopleNumber.value.value" :error-messages="peopleNumber.errorMessage.value" label="人數"
+              :items="peopleNumberOptions"></v-select>
+            <vue-date-picker v-model="dateTime.value.value" :error-messages="dateTime.errorMessage.value" label="日期 & 時間"
+              placeholder="日期 & 時間" dark time-picker-inline :min-time="{ hours: 18, minutes: 0 }"
+              :max-time="{ hours: 23, minutes: 0 }" :day-names="['一', '二', '三', '四', '五', '六', '日']"></vue-date-picker>
+            <div class="text-center">
+              <VBtn type="submit" color="">送出</VBtn>
+            </div>
+          </VForm>
         </v-sheet>
       </v-col>
     </v-row>
@@ -38,14 +52,32 @@ import { useRouter } from 'vue-router'
 
 const createSnackbar = useSnackbar()
 const router = useRouter()
-// const date = ref()
+
+// const schema = yup.object({
+//   name: yup.string().required('姓名必填'),
+//   phoneNumber: yup.string().required('手機號碼必填').matches(/^09\d{8}$/, '手機格式錯誤'),
+//   peopleNumber: yup.number().required('人數必填'),
+//   dateTime: yup.string().required('日期、時間必填')
+// })
 
 const schema = yup.object({
-  name: yup.string().required('姓名必填'),
-  phoneNumber: yup.string().required('手機號碼必填').matches(/^09\d{8}$/, '手機格式錯誤'),
+  name: yup
+    .string()
+    .required('姓名必填'),
+  phoneNumber:
+    yup.string().required('手機號碼必填').matches(/^09\d{8}$/, '手機格式錯誤'),
   peopleNumber: yup.number().required('人數必填'),
   dateTime: yup.string().required('日期、時間必填')
 })
+
+// const { handleSubmit, isSubmitting } = useForm({
+//   validationSchema: schema
+// })
+
+// const name = useField('name')
+// const phoneNumber = useField('phoneNumber')
+// const peopleNumber = useField('peopleNumber')
+// const dateTime = ref('')
 
 const { handleSubmit, isSubmitting } = useForm({
   validationSchema: schema
@@ -54,11 +86,12 @@ const { handleSubmit, isSubmitting } = useForm({
 const name = useField('name')
 const phoneNumber = useField('phoneNumber')
 const peopleNumber = useField('peopleNumber')
-const dateTime = ref(new Date())
+const dateTime = useField('dateTime')
 
 const submit = handleSubmit(async (values) => {
+  console.log(123)
   try {
-    await api.post('/users', {
+    await api.post('/users/reservation', {
       name: values.name,
       phoneNumber: values.phoneNumber,
       peopleNumber: values.peopleNumber,
@@ -75,6 +108,7 @@ const submit = handleSubmit(async (values) => {
     })
     router.push('/')
   } catch (error) {
+    console.log(error)
     createSnackbar({
       text: error.response.data.message,
       showCloseButton: false,
