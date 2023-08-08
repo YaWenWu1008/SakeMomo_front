@@ -126,3 +126,28 @@
     text-align: center;
   }
 }
+
+.contactImg {
+  height: 80vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/p/AF1QipPNxEAGerFKVsLKXxaqf4-dN4nmhRMzhIM7M4B_=s680-w680-h510);
+  background-position: center;
+  background-size: cover;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.contactRow {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+.contactRow2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
