@@ -9,7 +9,8 @@
   <v-container>
     <v-row>
       <v-col cols="12" class="text-center">
-        <p data-aos="fade-up">酒桃取名諧音「石頭」，正是期許能像石頭在歷經長時間的歲月風雨後，變得更加堅韌和耐久，創業者也需要在時間的考驗中，不斷磨練自己，將打造清酒界的「酒桃」烏托邦。</p>
+        <p data-aos="fade-up" data-aos-duration="1000">
+          酒桃取名諧音「石頭」，正是期許能像石頭在歷經長時間的歲月風雨後，變得更加堅韌和耐久，創業者也需要在時間的考驗中，不斷磨練自己，將打造清酒界的「酒桃」烏托邦。</p>
       </v-col>
     </v-row>
   </v-container>
@@ -17,18 +18,18 @@
   <v-container class="homeInformation text-center">
     <v-row class="homeInformationRow">
       <v-col cols="12" md="6">
-        <img src="../../assets/cheers.jpg" class="image1" data-aos="flip-left" dara-aos-offset="300"
-          data-aos-easing="ease-in-sine">
+        <img src="../../assets/cheers.jpg" class="image1" data-aos="flip-left" data-aos-easing="ease-in-sine"
+          data-aos-duration="1000">
       </v-col>
       <v-col cols="12" md="6">
         <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
-        <v-btn to="/reservation" color="secondary">訂位</v-btn>
+        <v-btn to="/reservation" color="secondary" data-aos="fade-right">訂位</v-btn>
       </v-col>
     </v-row>
     <v-row class="flex-wrap flex-md-wrap-reverse homeInformationRow">
       <v-col cols="12" md="6" class="order-sm-0">
         <img src="../../assets/cheers.jpg" class="image1" data-aos="flip-left" dara-aos-offset="500"
-          data-aos-easing="ease-in-sine">
+          data-aos-easing="ease-in-sine" data-aos-duration="1500">
       </v-col>
       <v-col cols="12" md="6" class=" order-md-first order-lg-first">
         <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
