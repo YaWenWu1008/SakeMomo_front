@@ -5,21 +5,7 @@
         <h1>線上訂位</h1>
       </v-col>
       <v-col>
-        <v-sheet width="450" class="mx-auto">
-          <!-- <v-form :disabled="isSubmitting" @submit.prevent="submit">
-            <v-text-field label="姓名" v-model="name.value.value" :error-messages="name.errorMessage.value"></v-text-field>
-            <v-text-field label="手機號碼" v-model="phoneNumber.value.value"
-              :error-messages="phoneNumber.errorMessage.value"></v-text-field>
-            <v-select v-model="peopleNumber.value.value" :items="peopleNumberOptions" label="人數"
-              :error-messages="peopleNumber.errorMessage.value"></v-select>
-            <vue-date-picker v-model="dateTime" label="日期" placeholder="日期 & 時間" dark time-picker-inline
-              :min-time="{ hours: 18, minutes: 0 }" :max-time="{ hours: 23, minutes: 0 }"
-              :day-names="['一', '二', '三', '四', '五', '六', '日']"></vue-date-picker>
-
-            <div class="text-center">
-              <v-btn type="submit" color="primary">送出</v-btn>
-            </div>
-          </v-form> -->
+        <v-sheet width="70%" class="mx-auto">
           <VForm :disabled="isSubmitting" @submit.prevent="submit">
             <VTextField v-model="name.value.value" :error-messages="name.errorMessage.value" label="姓名" counter
               maxlength="20"></VTextField>
@@ -41,24 +27,16 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import VueDatePicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 import { useForm, useField } from 'vee-validate'
 import * as yup from 'yup'
-import { api } from '@/plugins/axios'
+import { apiAuth } from '@/plugins/axios'
 import { useSnackbar } from 'vuetify-use-dialog'
 import { useRouter } from 'vue-router'
 
 const createSnackbar = useSnackbar()
 const router = useRouter()
-
-// const schema = yup.object({
-//   name: yup.string().required('姓名必填'),
-//   phoneNumber: yup.string().required('手機號碼必填').matches(/^09\d{8}$/, '手機格式錯誤'),
-//   peopleNumber: yup.number().required('人數必填'),
-//   dateTime: yup.string().required('日期、時間必填')
-// })
 
 const schema = yup.object({
   name: yup
@@ -69,15 +47,6 @@ const schema = yup.object({
   peopleNumber: yup.number().required('人數必填'),
   dateTime: yup.string().required('日期、時間必填')
 })
-
-// const { handleSubmit, isSubmitting } = useForm({
-//   validationSchema: schema
-// })
-
-// const name = useField('name')
-// const phoneNumber = useField('phoneNumber')
-// const peopleNumber = useField('peopleNumber')
-// const dateTime = ref('')
 
 const { handleSubmit, isSubmitting } = useForm({
   validationSchema: schema
@@ -91,7 +60,7 @@ const dateTime = useField('dateTime')
 const submit = handleSubmit(async (values) => {
   console.log(123)
   try {
-    await api.post('/users/reservation', {
+    await apiAuth.post('/reservation', {
       name: values.name,
       phoneNumber: values.phoneNumber,
       peopleNumber: values.peopleNumber,

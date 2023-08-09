@@ -29,17 +29,17 @@
 
 <script setup>
 import { apiAuth } from '@/plugins/axios'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useSnackbar } from 'vuetify-use-dialog'
 
 const createSnackbar = useSnackbar()
 
-const reservations = ref([]);
+const reservations = ref([])
 
-(async () => {
+onMounted(async () => {
   try {
-    const { data } = await apiAuth.get('/reservations/all')
-    reservations.value = data
+    const { data } = await apiAuth.get('/reservation/all')
+    reservations.value = data.result
   } catch (error) {
     createSnackbar({
       text: error.response.data.message,
@@ -51,5 +51,5 @@ const reservations = ref([]);
       }
     })
   }
-})()
+})
 </script>
