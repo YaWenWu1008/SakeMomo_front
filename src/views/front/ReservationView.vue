@@ -15,7 +15,8 @@
               :items="peopleNumberOptions"></v-select>
             <vue-date-picker v-model="dateTime.value.value" :error-messages="dateTime.errorMessage.value" label="日期 & 時間"
               placeholder="日期 & 時間" dark time-picker-inline :min-time="{ hours: 18, minutes: 0 }"
-              :max-time="{ hours: 23, minutes: 0 }" :day-names="['一', '二', '三', '四', '五', '六', '日']"></vue-date-picker>
+              :max-time="{ hours: 23, minutes: 0 }" :day-names="['一', '二', '三', '四', '五', '六', '日']"
+              :start-time="startTime" calendar-cell-class-name="dp-custom-cell"></vue-date-picker>
             <div class="text-center">
               <VBtn type="submit" color="">送出</VBtn>
             </div>
@@ -27,6 +28,7 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import VueDatePicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
 import { useForm, useField } from 'vee-validate'
@@ -91,4 +93,6 @@ const submit = handleSubmit(async (values) => {
 })
 
 const peopleNumberOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+const startTime = ref({ hours: 18, minutes: 0 })
 </script>
