@@ -19,6 +19,7 @@
     "pinia-plugin-persistedstate": "^3.2.0",
     "roboto-fontface": "*",
     "simple-parallax-js": "^5.6.2",
+    "swiper": "^10.1.0",
     "validator": "^13.9.0",
     "vee-validate": "^4.10.8",
     "vu": "^0.0.0",

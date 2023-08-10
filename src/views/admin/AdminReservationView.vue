@@ -1,6 +1,10 @@
 <template>
   <v-container>
     <v-row>
+      <v-col cols="12" class="text-center">
+        <h1>訂位管理</h1>
+      </v-col>
+      <v-divider></v-divider>
       <v-col cols="12">
         <v-table>
           <thead>
@@ -29,14 +33,14 @@
 
 <script setup>
 import { apiAuth } from '@/plugins/axios'
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { useSnackbar } from 'vuetify-use-dialog'
 
 const createSnackbar = useSnackbar()
 
-const reservations = ref([])
+const reservations = ref([]);
 
-onMounted(async () => {
+(async () => {
   try {
     const { data } = await apiAuth.get('/reservation/all')
     reservations.value = data.result
@@ -51,5 +55,5 @@ onMounted(async () => {
       }
     })
   }
-})
+})()
 </script>
