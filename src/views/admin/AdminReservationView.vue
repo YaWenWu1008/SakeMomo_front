@@ -14,6 +14,7 @@
               <th>手機號碼</th>
               <th>人數</th>
               <th>日期時間</th>
+              <th>訂位確認</th>
             </tr>
           </thead>
           <tbody>
@@ -23,6 +24,7 @@
               <td>{{ reservation.phoneNumber }}</td>
               <td>{{ reservation.peopleNumber }}</td>
               <td>{{ reservation.dateTime }}</td>
+              <td><v-checkbox v-model="reservation.confirmed"></v-checkbox></td>
             </tr>
           </tbody>
         </v-table>
@@ -43,7 +45,9 @@ const reservations = ref([]);
 (async () => {
   try {
     const { data } = await apiAuth.get('/reservation/all')
-    reservations.value = data.result
+    reservations.value = data.result.map(reservation => ({
+      ...reservation, confirmed: false
+    }))
   } catch (error) {
     createSnackbar({
       text: error.response.data.message,
