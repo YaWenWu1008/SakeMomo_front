@@ -91,7 +91,8 @@ const navItems = [
   { to: '/register', text: '註冊', icon: 'mdi-account-plus', show: !isLogin.value },
   { to: '/login', text: '登入', icon: 'mdi-login', show: !isLogin.value },
   { to: '/reservation', text: '訂位', icon: 'mdi-calendar-check', show: isLogin.value },
-  { to: '/admin', text: '管理', icon: 'mdi-cog', show: isLogin.value && isAdmin.value }
+  { to: '/admin', text: '管理', icon: 'mdi-cog', show: isLogin.value && isAdmin.value },
+  { to: '/userCenter', text: '會員中心', icon: 'mdi-cog', show: isLogin.value }
 ]
 
 const logout = async () => {

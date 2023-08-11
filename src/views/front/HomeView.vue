@@ -8,9 +8,14 @@
   <div class="space"></div>
   <v-container>
     <v-row>
-      <v-col cols="12" class="text-center">
-        <p data-aos="fade-up" data-aos-duration="1000">
-          酒桃取名諧音「石頭」，正是期許能像石頭在歷經長時間的歲月風雨後，變得更加堅韌和耐久，創業者也需要在時間的考驗中，不斷磨練自己，將打造清酒界的「酒桃」烏托邦。</p>
+      <v-col cols="12" class="text-center homeText" data-aos="fade-up" data-aos-duration="1000">
+        <p>
+          酒桃取名諧音「石頭」</p>
+        <p>正是期許能像石頭在歷經長時間的歲月風雨後</p>
+        <p>變得更加堅韌和耐久</p>
+        <p>創業者也需要在時間的考驗中</p>
+        <p>不斷磨練自己</p>
+        <p>將打造清酒界的「酒桃」烏托邦</p>
       </v-col>
     </v-row>
   </v-container>
@@ -79,7 +84,7 @@
       </v-col>
       <v-col class="homeInformation2Col">
         <span>營業時間</span>
-        <div class="d-flex flex-wrap ">
+        <div class="homeTime">
           <span>FRI-SAT : 18:00 ~ 1:00</span>
           <span>SUN-THU : 18:00 ~ 00:00</span>
         </div>

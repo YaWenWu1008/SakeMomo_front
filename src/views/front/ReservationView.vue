@@ -1,11 +1,11 @@
 <template>
+  <div class="contactImg">
+    <h1>線上訂位</h1>
+  </div>
   <v-container>
     <v-row>
-      <v-col cols="12">
-        <h1>線上訂位</h1>
-      </v-col>
       <v-col>
-        <v-sheet width="70%" class="mx-auto">
+        <v-sheet width="70%" class="mx-auto mb-9">
           <VForm :disabled="isSubmitting" @submit.prevent="submit">
             <VTextField v-model="name.value.value" :error-messages="name.errorMessage.value" label="姓名" counter
               maxlength="20"></VTextField>
@@ -15,9 +15,9 @@
               :items="peopleNumberOptions"></v-select>
             <vue-date-picker v-model="dateTime.value.value" :error-messages="dateTime.errorMessage.value" label="日期 & 時間"
               placeholder="日期 & 時間" dark time-picker-inline :min-time="{ hours: 18, minutes: 0 }"
-              :max-time="{ hours: 23, minutes: 0 }" :day-names="['一', '二', '三', '四', '五', '六', '日']"></vue-date-picker>
+              :max-time="{ hours: 24, minutes: 0 }" :day-names="['一', '二', '三', '四', '五', '六', '日']"></vue-date-picker>
             <div class="text-center">
-              <VBtn type="submit" color="">送出</VBtn>
+              <VBtn type="submit" color="primary">送出</VBtn>
             </div>
           </VForm>
         </v-sheet>

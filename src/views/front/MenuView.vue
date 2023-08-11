@@ -15,6 +15,7 @@
           <p><a @click="scrollToSection('#a9')">酒</a></p>
         </div>
       </v-col>
+      <v-divider></v-divider>
 
       <v-col cols="12" id="a1">
         <h2>開胃小食</h2>
