@@ -9,8 +9,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" class="text-center homeText" data-aos="fade-up" data-aos-duration="1000">
-        <p>
-          酒桃取名諧音「石頭」</p>
+        <p>酒桃取名諧音「石頭」</p>
         <p>正是期許能像石頭在歷經長時間的歲月風雨後</p>
         <p>變得更加堅韌和耐久</p>
         <p>創業者也需要在時間的考驗中</p>
@@ -28,7 +27,7 @@
       </v-col>
       <v-col cols="12" md="6">
         <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
-        <v-btn to="/reservation" color="secondary" data-aos="fade-right">訂位</v-btn>
+        <v-btn to="/reservation" color="secondary" data-aos="fade-right">點我訂位</v-btn>
       </v-col>
     </v-row>
     <v-row class="flex-wrap flex-md-wrap-reverse homeInformationRow">
@@ -38,7 +37,7 @@
       </v-col>
       <v-col cols="12" md="6" class=" order-md-first order-lg-first">
         <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
-        <v-btn to="/menu" color="secondary" data-aos="fade-right">Menu</v-btn>
+        <v-btn to="/menu" color="secondary" data-aos="fade-right">精選佳餚</v-btn>
       </v-col>
     </v-row>
   </v-container>

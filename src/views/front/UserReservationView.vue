@@ -2,14 +2,13 @@
   <v-container>
     <v-row>
       <v-col cols="12" class="text-center">
-        <h1>訂位管理</h1>
+        <h1>我的訂位</h1>
       </v-col>
       <v-divider></v-divider>
       <v-col cols="12">
         <v-table>
           <thead>
             <tr>
-              <th>ID</th>
               <th>姓名</th>
               <th>手機號碼</th>
               <th>人數</th>
@@ -19,7 +18,6 @@
           </thead>
           <tbody>
             <tr v-for="reservation in reservations" :key="reservation._id">
-              <td>{{ reservation._id }}</td>
               <td>{{ reservation.name }}</td>
               <td>{{ reservation.phoneNumber }}</td>
               <td>{{ reservation.peopleNumber }}</td>
@@ -46,8 +44,6 @@ const reservations = ref([]);
   try {
     const { data } = await apiAuth.get('/reservation')
     reservations.value = data.result
-
-    // reservations.value = data.result
   } catch (error) {
     console.log(error)
     createSnackbar({

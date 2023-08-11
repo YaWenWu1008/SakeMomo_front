@@ -1,3 +1,31 @@
 <template>
-  <h1>會員資料</h1>
+  <v-container>
+    <v-row>
+      <v-col cols="12" class="text-center">
+        <h1>我的訂位</h1>
+      </v-col>
+      <v-divider></v-divider>
+      <v-col cols="12">
+        <v-table>
+          <thead>
+            <tr>
+              <th>帳號</th>
+              <th>e-mail</th>
+              <th>手機號碼</th>
+              <th>密碼</th>
+              <th>編輯</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </v-table>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
