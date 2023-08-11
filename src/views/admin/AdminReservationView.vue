@@ -49,7 +49,6 @@ const updateConfirmation = async (reservationId, confirmed) => {
       confirmed
     })
 
-    // 在这里可以根据服务器返回的 response 进行处理，例如显示成功消息
     if (response.data.success) {
       createSnackbar({
         text: '訂位狀態已更新',
