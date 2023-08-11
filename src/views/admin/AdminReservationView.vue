@@ -24,7 +24,8 @@
               <td>{{ reservation.phoneNumber }}</td>
               <td>{{ reservation.peopleNumber }}</td>
               <td>{{ reservation.dateTime }}</td>
-              <td><v-checkbox v-model="reservation.confirmed"></v-checkbox></td>
+              <td><v-checkbox v-model="reservation.confirmed"
+                  @change="updateConfirmation(reservation._id, reservation.confirmed)"></v-checkbox></td>
             </tr>
           </tbody>
         </v-table>
@@ -40,14 +41,49 @@ import { useSnackbar } from 'vuetify-use-dialog'
 
 const createSnackbar = useSnackbar()
 
-const reservations = ref([]);
+const reservations = ref([])
+
+const updateConfirmation = async (reservationId, confirmed) => {
+  try {
+    const response = await apiAuth.patch(`/reservation/${reservationId}`, {
+      confirmed
+    })
+
+    // 在这里可以根据服务器返回的 response 进行处理，例如显示成功消息
+    if (response.data.success) {
+      createSnackbar({
+        text: '訂位狀態已更新',
+        showCloseButton: false,
+        snackbarProps: {
+          timeout: 2000,
+          color: 'success',
+          location: 'bottom'
+        }
+      })
+
+      // 更新客户端的预订数据，以反映最新的确认状态
+      const updatedReservation = reservations.value.find(r => r._id === reservationId)
+      if (updatedReservation) {
+        updatedReservation.confirmed = confirmed
+      }
+    }
+  } catch (error) {
+    createSnackbar({
+      text: error.response.data.message,
+      showCloseButton: false,
+      snackbarProps: {
+        timeout: 2000,
+        color: 'red',
+        location: 'bottom'
+      }
+    })
+  }
+}
 
 (async () => {
   try {
     const { data } = await apiAuth.get('/reservation/all')
-    reservations.value = data.result.map(reservation => ({
-      ...reservation, confirmed: false
-    }))
+    reservations.value = data.result
   } catch (error) {
     createSnackbar({
       text: error.response.data.message,
