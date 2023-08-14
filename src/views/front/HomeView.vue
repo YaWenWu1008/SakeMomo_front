@@ -26,7 +26,14 @@
           data-aos-duration="1000">
       </v-col>
       <v-col cols="12" md="6">
-        <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
+        <p>清酒</p>
+        <p>是日本的傳統酒類之一</p>
+        <p>以其細緻的口感、豐富的層次和深厚的歷史而聞名於世</p>
+        <p>在我們這邊</p>
+        <p>您可以選擇各種口味和風格的清酒</p>
+        <p>從清新淡雅到濃郁芳香</p>
+        <p>從乾爽到甘甜</p>
+        <p>都能找到適合您的選擇</p>
         <v-btn to="/reservation" color="secondary" data-aos="fade-right">點我訂位</v-btn>
       </v-col>
     </v-row>
@@ -36,7 +43,12 @@
           data-aos-easing="ease-in-sine" data-aos-duration="1500">
       </v-col>
       <v-col cols="12" md="6" class=" order-md-first order-lg-first">
-        <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
+        <p>除了優質的清酒</p>
+        <p>我們的料理同樣令人垂涎三尺</p>
+        <p>我們的廚師團隊巧妙地將日本料理的精髓融入到每道菜品中</p>
+        <p>從新鮮的海鮮、精緻的壽司</p>
+        <p>到風味獨特的燒烤和小吃</p>
+        <p>每一口都是對味蕾的極致享受</p>
         <v-btn to="/menu" color="secondary" data-aos="fade-right">精選佳餚</v-btn>
       </v-col>
     </v-row>

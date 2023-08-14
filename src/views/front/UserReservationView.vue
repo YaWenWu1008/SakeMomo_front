@@ -5,6 +5,9 @@
         <h1>我的訂位</h1>
       </v-col>
       <v-divider></v-divider>
+      <v-col class="text-center">
+        <h4>若需取消訂位，請聯絡我們 02 2703 7507</h4>
+      </v-col>
       <v-col cols="12">
         <v-table>
           <thead>
