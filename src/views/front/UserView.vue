@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" class="text-center">
-        <h1>我的訂位</h1>
+        <h1>個人資料</h1>
       </v-col>
       <v-divider></v-divider>
       <v-col cols="12">
@@ -17,11 +17,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr v-for="user in users" :key="user._id">
+              <td>{{ user.account }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.phoneNumber }}</td>
+              <td>{{ user.password }}</td>
+              <td><v-btn color="green">編輯</v-btn></td>
             </tr>
           </tbody>
         </v-table>
@@ -29,3 +30,31 @@
     </v-row>
   </v-container>
 </template>
+
+<script setup>
+import { apiAuth } from '@/plugins/axios'
+import { ref } from 'vue'
+import { useSnackbar } from 'vuetify-use-dialog'
+
+const createSnackbar = useSnackbar()
+const users = ref([]);
+
+(async () => {
+  try {
+    const { data } = await apiAuth.get('/users')
+    console.log({ data })
+    users.value = data.result
+  } catch (error) {
+    console.log(error)
+    createSnackbar({
+      text: error.response.data.message,
+      showCloseButton: false,
+      snackbarProps: {
+        timeout: 2000,
+        color: 'red',
+        location: 'bottom'
+      }
+    })
+  }
+})()
+</script>
