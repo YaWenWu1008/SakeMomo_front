@@ -16,7 +16,7 @@
               @keydown.enter="tableApplySearch" v-model="tableSearch"></VTextField>
           </template>
           <template #[`item.image`]="{ item }">
-            <VImg :src="item.raw.image" height="50px"></VImg>
+            <VImg :src="item.raw.image" height="80px"></VImg>
           </template>
           <template #[`item.sell`]="{ item }">
             <VIcon icon="mdi-check" v-if="item.raw.sell"></VIcon>
