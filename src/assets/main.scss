@@ -248,3 +248,17 @@
   display: flex;
   flex-direction: column;
 }
+
+@media(max-width:960px) {
+  .swiper1 {
+    display: none;
+  }
+
+
+}
+
+@media(min-width:961px) {
+  .swiper2 {
+    display: none;
+  }
+}

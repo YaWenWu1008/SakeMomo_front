@@ -8,6 +8,7 @@ export const useUserStore = defineStore('user', () => {
   const account = ref('')
   const email = ref('')
   const phoneNumber = ref('')
+  const reservation = ref({})
   const role = ref(UserRole.USER)
 
   const login = (data) => {
@@ -15,6 +16,7 @@ export const useUserStore = defineStore('user', () => {
     account.value = data.account
     email.value = data.email
     phoneNumber.value = data.phoneNumber
+    reservation.value = data.reservation
     role.value = data.role
   }
 
@@ -37,6 +39,7 @@ export const useUserStore = defineStore('user', () => {
       account.value = data.result.account
       email.value = data.result.email
       phoneNumber.value = data.result.phoneNumber
+      reservation.value = data.result.reservation
       role.value = data.result.role
     } catch (error) {
       token.value = ''
@@ -56,6 +59,7 @@ export const useUserStore = defineStore('user', () => {
     account,
     email,
     phoneNumber,
+    reservation,
     role,
     login,
     isLogin,
