@@ -1,6 +1,6 @@
 <template>
   <VContainer>
-    <VRow>
+    <VRow class="loginRow">
       <VCol cols="12">
         <h1>登入</h1>
       </VCol>
@@ -13,11 +13,15 @@
             <VTextField v-model="password.value.value" :error-messages="password.errorMessage.value" label="密碼" counter
               maxlength="20" type="password"></VTextField>
             <div class="text-center">
-              <VBtn type="submit" color="green">登入</VBtn>
+              <VBtn type="submit" color="green-darken-3">登入</VBtn>
             </div>
           </VForm>
         </v-sheet>
       </VCol>
+      <v-col class="text-center">
+        <p>還不是會員</p>
+        <v-btn to="/register">點我註冊</v-btn>
+      </v-col>
     </VRow>
   </VContainer>
 </template>

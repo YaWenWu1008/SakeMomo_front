@@ -19,7 +19,7 @@
             <v-text-field v-model="passwordConfirm.value.value" :error-messages="passwordConfirm.errorMessage.value"
               label="確認密碼" counter maxlength="20" type="password"></v-text-field>
             <div class="text-center">
-              <v-btn type="submit" color="primary" @click="submit">註冊</v-btn>
+              <v-btn type="submit" color="green-darken-3" @click="submit">註冊</v-btn>
             </div>
           </v-form>
         </v-sheet>

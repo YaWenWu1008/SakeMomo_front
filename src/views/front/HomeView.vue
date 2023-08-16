@@ -54,7 +54,7 @@
     </v-row>
   </v-container>
 
-  <h1 class="text-center mb-3">相片集</h1>
+  <h1 class="text-center mb-3">SAKE MOMO</h1>
   <!-- <v-carousel hide-delimiters class="homeCarousel">
     <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" cover></v-carousel-item>
   </v-carousel> -->
@@ -112,7 +112,7 @@
   <v-container class="homeInformation2">
     <v-row class="homeInformation2Row">
       <v-col class="homeInformation2Col">
-        <span>address</span>
+        <span>ADDRESS</span>
         <span>台北市大安區光復南路456巷6號</span>
       </v-col>
       <v-col class="homeInformation2Col">
@@ -120,7 +120,7 @@
         <span>02 2703 7507</span>
       </v-col>
       <v-col class="homeInformation2Col">
-        <span>營業時間</span>
+        <span>OPEN</span>
         <div class="homeTime">
           <span>FRI-SAT : 18:00 ~ 1:00</span>
           <span>SUN-THU : 18:00 ~ 00:00</span>
@@ -128,6 +128,9 @@
       </v-col>
 
     </v-row>
+    <v-col>
+      <GoogleMap></GoogleMap>
+    </v-col>
 
   </v-container>
 </template>
@@ -141,6 +144,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/effect-fade'
 import { EffectFade, Pagination, Navigation } from 'swiper/modules'
+import GoogleMap from '@/components/GoogleMap.vue'
 
 export default {
   mounted() {
@@ -149,7 +153,8 @@ export default {
 
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    GoogleMap
   },
   setup() {
     return {

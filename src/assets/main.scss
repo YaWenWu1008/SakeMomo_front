@@ -65,6 +65,18 @@
   width: 100%;
 }
 
+.loginRow {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  p {
+    font-size: 8px;
+    color: #989898;
+    margin-bottom: 8px;
+  }
+}
+
 .homeInformation {
   margin-bottom: 100px;
 
@@ -139,6 +151,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 3rem;
+
 
   p {
     text-align: center;
@@ -148,7 +162,7 @@
 .contactImg {
   height: 80vh;
   width: 100vw;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/p/AF1QipPNxEAGerFKVsLKXxaqf4-dN4nmhRMzhIM7M4B_=s680-w680-h510);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/p/AF1QipMq5PAP38N8LkbwAvcQPywXQjJdoGnOLS4rylJG=s1360-w1360-h1020);
   background-position: center;
   background-size: cover;
   font-size: 40px;
@@ -249,6 +263,20 @@
   flex-direction: column;
 }
 
+.reservationImg {
+  height: 80vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/p/AF1QipPlIj_YBQ2N0_8rlVFcJYq_WAIuZn0PtyCFDwMd=s1360-w1360-h1020);
+  background-position: center;
+  background-size: cover;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+// 小版
 @media(max-width:960px) {
   .swiper1 {
     display: none;
@@ -257,8 +285,22 @@
 
 }
 
+
+// 大版
 @media(min-width:961px) {
   .swiper2 {
     display: none;
+  }
+
+  .homeInformation2Row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .homeInformation2Col {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
   }
 }

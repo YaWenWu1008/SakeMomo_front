@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer permanent>
+  <v-navigation-drawer permanent color="secondary">
     <v-list>
       <v-list-item :prepend-avatar="avatar" :title="account"></v-list-item>
     </v-list>

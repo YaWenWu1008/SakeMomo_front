@@ -28,7 +28,9 @@
 
   <v-dialog v-model="editUserDialog" class="text-center">
     <template v-slot:activator="{ on }">
-      <v-btn color="green" v-on="on" @click="showDialog(user)">編輯</v-btn>
+      <div class="text-center">
+        <v-btn color="green-darken-3" v-on="on" @click="showDialog(user)">編輯</v-btn>
+      </div>
     </template>
     <v-card>
       <v-card-title>編輯資料</v-card-title>

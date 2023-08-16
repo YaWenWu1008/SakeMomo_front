@@ -2,7 +2,7 @@
   <div class="aboutImg">Our Story</div>
   <v-container>
     <v-row>
-      <v-col class="aboutCol">
+      <v-col class="aboutCol homeText">
         <p data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="1000">創業之路</p>
         <p data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="1000">有時會像攀登一座高山</p>
         <p data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="1000">艱難陡峭</p>

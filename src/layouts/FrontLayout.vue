@@ -4,7 +4,7 @@
       <v-container class="d-flex align-center">
         <v-btn to="/" :active="false">
           <v-img src="../assets/logo.png" :width="40"></v-img>
-          <!-- <p class="ml-4">酒桃</p> -->
+          <p class="ml-4">酒桃</p>
         </v-btn>
         <v-spacer></v-spacer>
         <v-btn v-for="barItem in barItems" :key="barItem.to" :to="barItem.to">{{ barItem.text }}</v-btn>

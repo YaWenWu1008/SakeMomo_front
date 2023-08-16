@@ -6,7 +6,7 @@
       </VCol>
       <VDivider></VDivider>
       <VCol cols="12">
-        <VBtn color="green" @click="openDialog">新增</VBtn>
+        <VBtn color="green-darken-3" @click="openDialog">新增</VBtn>
         <VDataTableServer v-model:items-per-page="tableItemsPerPage" v-model:sort-by="tableSortBy"
           v-model:page="tablePage" :items="tableProducts" :headers="tableHeaders" :loading="tableLoading"
           :items-length="tableItemsLength" :search="tableSearch" hover @update:items-per-page="tableLoadItems"
@@ -28,7 +28,7 @@
       </VCol>
     </VRow>
   </VContainer>
-  <VDialog persistent width="500px" v-model="dialog">
+  <VDialog persistent width="500px" scroll-strategy="block" v-model="dialog">
     <VForm :disabled="isSubmitting" @submit.prevent="submit">
       <VCard>
         <VCardTitle>{{ dialogId.length > 0 ? '編輯商品' : '新增商品' }}</VCardTitle>

@@ -1,5 +1,5 @@
 <template>
-  <div class="contactImg">
+  <div class="reservationImg">
     <h1>線上訂位</h1>
   </div>
   <v-container>
@@ -19,10 +19,11 @@
             <v-select v-model="peopleNumber.value.value" :error-messages="peopleNumber.errorMessage.value" label="人數"
               :items="peopleNumberOptions"></v-select>
             <vue-date-picker v-model="dateTime.value.value" :error-messages="dateTime.errorMessage.value" label="日期 & 時間"
-              placeholder="日期 & 時間" dark time-picker-inline :min-time="{ hours: 18, minutes: 0 }"
-              :max-time="{ hours: 24, minutes: 0 }" :day-names="['一', '二', '三', '四', '五', '六', '日']"></vue-date-picker>
+              placeholder="日期 & 時間" dark time-picker-inline :min-time="{ hours: 18, minutes: 0 }" reverse-years
+              :year-range="[2023, 2030]" :max-time="{ hours: 24, minutes: 0 }" :start-time="startTime"
+              :format-locale="zhTW"></vue-date-picker>
             <div class="text-center mt-4 mb-4">
-              <VBtn type="submit" color="primary">送出</VBtn>
+              <VBtn type="submit" color="green-darken-3">送出</VBtn>
             </div>
           </VForm>
         </v-sheet>
@@ -35,6 +36,7 @@
 import { ref } from 'vue'
 import VueDatePicker from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
+import { zhTW } from 'date-fns/locale'
 import { useForm, useField } from 'vee-validate'
 import * as yup from 'yup'
 import { apiAuth } from '@/plugins/axios'
@@ -99,4 +101,5 @@ const submit = handleSubmit(async (values) => {
 const peopleNumberOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 const startTime = ref({ hours: 18, minutes: 0 })
+
 </script>
