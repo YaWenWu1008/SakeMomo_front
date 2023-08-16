@@ -76,6 +76,36 @@ const routes = [
           login: true,
           admin: false
         }
+      },
+      {
+        path: 'userCenter',
+        name: 'userCenter',
+        component: () => import(/* webpackChunkName: "userCenter" */ '@/views/front/UserCenterView.vue'),
+        meta: {
+          title: '酒桃 Sakemomo | 會員中心',
+          login: true,
+          admin: false
+        }
+      },
+      {
+        path: 'userView',
+        name: 'userView',
+        component: () => import(/* webpackChunkName: "userView" */ '@/views/front/userView.vue'),
+        meta: {
+          title: '酒桃 Sakemomo | 會員資料',
+          login: true,
+          admin: false
+        }
+      },
+      {
+        path: 'userReservation',
+        name: 'userReservation',
+        component: () => import(/* webpackChunkName: "userReservation" */ '@/views/front/UserReservationView.vue'),
+        meta: {
+          title: '酒桃 Sakemomo | 我的訂位',
+          login: true,
+          admin: false
+        }
       }
     ]
   },

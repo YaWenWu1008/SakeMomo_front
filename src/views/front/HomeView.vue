@@ -8,9 +8,13 @@
   <div class="space"></div>
   <v-container>
     <v-row>
-      <v-col cols="12" class="text-center">
-        <p data-aos="fade-up" data-aos-duration="1000">
-          酒桃取名諧音「石頭」，正是期許能像石頭在歷經長時間的歲月風雨後，變得更加堅韌和耐久，創業者也需要在時間的考驗中，不斷磨練自己，將打造清酒界的「酒桃」烏托邦。</p>
+      <v-col cols="12" class="text-center homeText" data-aos="fade-up" data-aos-duration="1000">
+        <p>酒桃取名諧音「石頭」</p>
+        <p>正是期許能像石頭在歷經長時間的歲月風雨後</p>
+        <p>變得更加堅韌和耐久</p>
+        <p>創業者也需要在時間的考驗中</p>
+        <p>不斷磨練自己</p>
+        <p>將打造清酒界的「酒桃」烏托邦</p>
       </v-col>
     </v-row>
   </v-container>
@@ -22,8 +26,15 @@
           data-aos-duration="1000">
       </v-col>
       <v-col cols="12" md="6">
-        <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
-        <v-btn to="/reservation" color="secondary" data-aos="fade-right">訂位</v-btn>
+        <p>清酒</p>
+        <p>是日本的傳統酒類之一</p>
+        <p>以其細緻的口感、豐富的層次和深厚的歷史而聞名於世</p>
+        <p>在我們這邊</p>
+        <p>您可以選擇各種口味和風格的清酒</p>
+        <p>從清新淡雅到濃郁芳香</p>
+        <p>從乾爽到甘甜</p>
+        <p>都能找到適合您的選擇</p>
+        <v-btn to="/reservation" color="secondary" data-aos="fade-right">點我訂位</v-btn>
       </v-col>
     </v-row>
     <v-row class="flex-wrap flex-md-wrap-reverse homeInformationRow">
@@ -32,16 +43,70 @@
           data-aos-easing="ease-in-sine" data-aos-duration="1500">
       </v-col>
       <v-col cols="12" md="6" class=" order-md-first order-lg-first">
-        <p>我們沒有限制喝酒時間，建議提前訂位，確保有位子，當天位子保留10分鐘。</p>
-        <v-btn to="/menu" color="secondary" data-aos="fade-right">Menu</v-btn>
+        <p>除了優質的清酒</p>
+        <p>我們的料理同樣令人垂涎三尺</p>
+        <p>我們的廚師團隊巧妙地將日本料理的精髓融入到每道菜品中</p>
+        <p>從新鮮的海鮮、精緻的壽司</p>
+        <p>到風味獨特的燒烤和小吃</p>
+        <p>每一口都是對味蕾的極致享受</p>
+        <v-btn to="/menu" color="secondary" data-aos="fade-right">精選佳餚</v-btn>
       </v-col>
     </v-row>
   </v-container>
 
   <h1 class="text-center mb-3">相片集</h1>
-  <v-carousel hide-delimiters class="homeCarousel">
+  <!-- <v-carousel hide-delimiters class="homeCarousel">
     <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" cover></v-carousel-item>
-  </v-carousel>
+  </v-carousel> -->
+  <div class="swiper1">
+    <swiper ref="{swiperRef}" :slidesPerView="3" :centeredSlides="true" :spaceBetween="100" :pagination="{
+      type: 'fraction',
+    }" :navigation="true" :modules="modules">
+      <SwiperSlide><img
+          src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/336891575_1240432073573017_3181944242916118974_n.jpg?_nc_cat=102&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=LS4fDAxVhTwAX8Ydosy&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfBI8rLT4SYbAkC27LvpEsBta6XnQaMq_cUHOA19niJ-8A&oe=64D66B01">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t39.30808-6/336657706_786152522844676_4485048786605593330_n.jpg?_nc_cat=101&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=yJdhO2WA53sAX-WISm8&_nc_ht=scontent.ftpe7-4.fna&oh=00_AfCgttRG4a5iasvwLUYwMEioqBro62PvfF1A7ygnhcYHzw&oe=64D63E73">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/336509186_4095991213960004_3995454075499257439_n.jpg?_nc_cat=111&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=PZeZj1n6XYkAX-Ydjno&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfB6n5BBuggHuhvW9oCO9dj0xEiiKgj_5YT_ePLvHG0Lig&oe=64D5E65F">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://lh3.googleusercontent.com/p/AF1QipMq5PAP38N8LkbwAvcQPywXQjJdoGnOLS4rylJG=s680-w680-h510">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://lh3.googleusercontent.com/p/AF1QipNNPyFF3T5UzrsnqcVyt9jP1_QQgg0T1PSlh5JH=s680-w680-h510">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://lh3.googleusercontent.com/p/AF1QipPuw1P0XigDQmxM1bXgN0uppwrinq6itgSCLOQx=s680-w680-h510">
+      </SwiperSlide>
+    </swiper>
+  </div>
+
+  <div class="swiper2">
+    <swiper :spaceBetween="30" :effect="'fade'" :navigation="true" :pagination="{
+      clickable: true,
+    }" :modules="modules" class="mySwiper">
+      <SwiperSlide><img
+          src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/336891575_1240432073573017_3181944242916118974_n.jpg?_nc_cat=102&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=LS4fDAxVhTwAX8Ydosy&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfBI8rLT4SYbAkC27LvpEsBta6XnQaMq_cUHOA19niJ-8A&oe=64D66B01">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t39.30808-6/336657706_786152522844676_4485048786605593330_n.jpg?_nc_cat=101&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=yJdhO2WA53sAX-WISm8&_nc_ht=scontent.ftpe7-4.fna&oh=00_AfCgttRG4a5iasvwLUYwMEioqBro62PvfF1A7ygnhcYHzw&oe=64D63E73">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/336509186_4095991213960004_3995454075499257439_n.jpg?_nc_cat=111&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=PZeZj1n6XYkAX-Ydjno&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfB6n5BBuggHuhvW9oCO9dj0xEiiKgj_5YT_ePLvHG0Lig&oe=64D5E65F">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://lh3.googleusercontent.com/p/AF1QipMq5PAP38N8LkbwAvcQPywXQjJdoGnOLS4rylJG=s680-w680-h510">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://lh3.googleusercontent.com/p/AF1QipNNPyFF3T5UzrsnqcVyt9jP1_QQgg0T1PSlh5JH=s680-w680-h510">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://lh3.googleusercontent.com/p/AF1QipPuw1P0XigDQmxM1bXgN0uppwrinq6itgSCLOQx=s680-w680-h510">
+      </SwiperSlide>
+    </swiper>
+  </div>
 
   <h1 class="text-center mb-3">INFORMATION</h1>
   <v-container class="homeInformation2">
@@ -56,15 +121,12 @@
       </v-col>
       <v-col class="homeInformation2Col">
         <span>營業時間</span>
-        <div class="d-flex flex-wrap ">
+        <div class="homeTime">
           <span>FRI-SAT : 18:00 ~ 1:00</span>
           <span>SUN-THU : 18:00 ~ 00:00</span>
         </div>
       </v-col>
-      <!-- <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9583868108703!2d121.55445587600065!3d25.03548623823055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab22532c8b1b%3A0x5456aa82472b085!2z6YWS5qGDU2FrZSBtb21v!5e0!3m2!1szh-TW!2stw!4v1691407659694!5m2!1szh-TW!2stw"
-        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
     </v-row>
 
   </v-container>
@@ -73,33 +135,25 @@
 <script>
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import 'swiper/css/effect-fade'
+import { EffectFade, Pagination, Navigation } from 'swiper/modules'
 
 export default {
   mounted() {
     AOS.init()
   },
-  data() {
+
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  setup() {
     return {
-      items: [
-        {
-          src: 'https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/336891575_1240432073573017_3181944242916118974_n.jpg?_nc_cat=102&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=LS4fDAxVhTwAX8Ydosy&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfBI8rLT4SYbAkC27LvpEsBta6XnQaMq_cUHOA19niJ-8A&oe=64D66B01'
-        },
-        {
-          src: 'https://scontent.ftpe7-4.fna.fbcdn.net/v/t39.30808-6/336657706_786152522844676_4485048786605593330_n.jpg?_nc_cat=101&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=yJdhO2WA53sAX-WISm8&_nc_ht=scontent.ftpe7-4.fna&oh=00_AfCgttRG4a5iasvwLUYwMEioqBro62PvfF1A7ygnhcYHzw&oe=64D63E73'
-        },
-        {
-          src: 'https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/336509186_4095991213960004_3995454075499257439_n.jpg?_nc_cat=111&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=PZeZj1n6XYkAX-Ydjno&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfB6n5BBuggHuhvW9oCO9dj0xEiiKgj_5YT_ePLvHG0Lig&oe=64D5E65F'
-        },
-        {
-          src: 'https://lh3.googleusercontent.com/p/AF1QipMq5PAP38N8LkbwAvcQPywXQjJdoGnOLS4rylJG=s680-w680-h510'
-        },
-        {
-          src: 'https://lh3.googleusercontent.com/p/AF1QipNNPyFF3T5UzrsnqcVyt9jP1_QQgg0T1PSlh5JH=s680-w680-h510'
-        },
-        {
-          src: 'https://lh3.googleusercontent.com/p/AF1QipPuw1P0XigDQmxM1bXgN0uppwrinq6itgSCLOQx=s680-w680-h510'
-        }
-      ]
+      modules: [EffectFade, Pagination, Navigation]
     }
   }
 }

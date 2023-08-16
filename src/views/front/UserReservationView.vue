@@ -2,25 +2,30 @@
   <v-container>
     <v-row>
       <v-col cols="12" class="text-center">
-        <h1>會員管理</h1>
+        <h1>我的訂位</h1>
       </v-col>
       <v-divider></v-divider>
+      <v-col class="text-center">
+        <h4>若需取消訂位，請聯絡我們 02 2703 7507</h4>
+      </v-col>
       <v-col cols="12">
         <v-table>
           <thead>
             <tr>
-              <th>id</th>
-              <th>帳號</th>
-              <th>信箱</th>
+              <th>姓名</th>
               <th>手機號碼</th>
+              <th>人數</th>
+              <th>日期時間</th>
+              <th>訂位確認</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="user in users" :key="user._id">
-              <td>{{ user._id }}</td>
-              <td>{{ user.account }}</td>
-              <td>{{ user.email }}</td>
-              <td>{{ user.phoneNumber }}</td>
+            <tr v-for="reservation in reservations" :key="reservation._id">
+              <td>{{ reservation.name }}</td>
+              <td>{{ reservation.phoneNumber }}</td>
+              <td>{{ reservation.peopleNumber }}</td>
+              <td>{{ reservation.dateTime }}</td>
+              <td>{{ reservation.confirmed }}</td>
             </tr>
           </tbody>
         </v-table>
@@ -35,13 +40,15 @@ import { ref } from 'vue'
 import { useSnackbar } from 'vuetify-use-dialog'
 
 const createSnackbar = useSnackbar()
-const users = ref([]);
+
+const reservations = ref([]);
 
 (async () => {
   try {
-    const { data } = await apiAuth.get('/users/all')
-    users.value = data.result
+    const { data } = await apiAuth.get('/reservation')
+    reservations.value = data.result
   } catch (error) {
+    console.log(error)
     createSnackbar({
       text: error.response.data.message,
       showCloseButton: false,

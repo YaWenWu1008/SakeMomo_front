@@ -3,7 +3,8 @@
     <v-app-bar color="#863436">
       <v-container class="d-flex align-center">
         <v-btn to="/" :active="false">
-          <v-img src="../assets/sakelogo.png" :width="40"></v-img>
+          <v-img src="../assets/logo.png" :width="40"></v-img>
+          <!-- <p class="ml-4">酒桃</p> -->
         </v-btn>
         <v-spacer></v-spacer>
         <v-btn v-for="barItem in barItems" :key="barItem.to" :to="barItem.to">{{ barItem.text }}</v-btn>
@@ -91,7 +92,8 @@ const navItems = [
   { to: '/register', text: '註冊', icon: 'mdi-account-plus', show: !isLogin.value },
   { to: '/login', text: '登入', icon: 'mdi-login', show: !isLogin.value },
   { to: '/reservation', text: '訂位', icon: 'mdi-calendar-check', show: isLogin.value },
-  { to: '/admin', text: '管理', icon: 'mdi-cog', show: isLogin.value && isAdmin.value }
+  { to: '/admin', text: '管理', icon: 'mdi-cog', show: isLogin.value && isAdmin.value },
+  { to: '/userCenter', text: '會員中心', icon: 'mdi-cog', show: isLogin.value }
 ]
 
 const logout = async () => {
@@ -123,7 +125,7 @@ const logout = async () => {
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // For smooth scrolling
+    behavior: 'smooth'
   })
 }
 </script>
