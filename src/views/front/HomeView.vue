@@ -19,13 +19,13 @@
     </v-row>
   </v-container>
   <div class="space"></div>
-  <v-container class="homeInformation text-center">
+  <v-container-fliud class="homeInformation text-center">
     <v-row class="homeInformationRow">
       <v-col cols="12" md="6">
-        <img src="../../assets/cheers.jpg" class="image1" data-aos="flip-left" data-aos-easing="ease-in-sine"
+        <img src="../../assets/sake.webp" class="image1" data-aos="flip-left" data-aos-easing="ease-in-sine"
           data-aos-duration="1000">
       </v-col>
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" data-aos="fade-up" data-aos-duration="1000">
         <p>清酒</p>
         <p>是日本的傳統酒類之一</p>
         <p>以其細緻的口感、豐富的層次和深厚的歷史而聞名於世</p>
@@ -42,7 +42,7 @@
         <img src="../../assets/cheers.jpg" class="image1" data-aos="flip-left" dara-aos-offset="500"
           data-aos-easing="ease-in-sine" data-aos-duration="1500">
       </v-col>
-      <v-col cols="12" md="6" class=" order-md-first order-lg-first">
+      <v-col cols="12" md="6" class="order-md-first order-lg-first" data-aos="fade-up" data-aos-duration="1000">
         <p>除了優質的清酒</p>
         <p>我們的料理同樣令人垂涎三尺</p>
         <p>我們的廚師團隊巧妙地將日本料理的精髓融入到每道菜品中</p>
@@ -52,16 +52,18 @@
         <v-btn to="/menu" color="secondary" data-aos="fade-right">精選佳餚</v-btn>
       </v-col>
     </v-row>
-  </v-container>
+  </v-container-fliud>
 
-  <h1 class="text-center mb-3">SAKE MOMO</h1>
-  <!-- <v-carousel hide-delimiters class="homeCarousel">
-    <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" cover></v-carousel-item>
-  </v-carousel> -->
+  <h1 class="text-center mb-3 ">SAKE MOMO</h1>
+
   <div class="swiper1">
-    <swiper ref="{swiperRef}" :slidesPerView="3" :centeredSlides="true" :spaceBetween="100" :pagination="{
-      type: 'fraction',
-    }" :navigation="true" :modules="modules">
+    <swiper ref="{swiperRef}" :slidesPerView="3" :centeredSlides="true" :spaceBetween="100" :navigation="true"
+      :modules="modules" :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }" :scrollbar="{
+  hide: true,
+}">
       <SwiperSlide><img
           src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/336891575_1240432073573017_3181944242916118974_n.jpg?_nc_cat=102&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=LS4fDAxVhTwAX8Ydosy&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfBI8rLT4SYbAkC27LvpEsBta6XnQaMq_cUHOA19niJ-8A&oe=64D66B01">
       </SwiperSlide>
@@ -79,14 +81,20 @@
       </SwiperSlide>
       <SwiperSlide><img
           src="https://lh3.googleusercontent.com/p/AF1QipPuw1P0XigDQmxM1bXgN0uppwrinq6itgSCLOQx=s680-w680-h510">
+      </SwiperSlide>
+      <SwiperSlide><img
+          src="https://lh3.googleusercontent.com/p/AF1QipPWRLo4RAPLLbs-M2Gf5TPC4LKh6a4rSJGOjiAM=s680-w680-h510">
       </SwiperSlide>
     </swiper>
   </div>
 
   <div class="swiper2">
-    <swiper :spaceBetween="30" :effect="'fade'" :navigation="true" :pagination="{
-      clickable: true,
-    }" :modules="modules" class="mySwiper">
+    <swiper :spaceBetween="30" :effect="'fade'" :navigation="true" :modules="modules" class="mySwiper" :autoplay="{
+      delay: 2500,
+      disableOnInteraction: false,
+    }" :scrollbar="{
+  hide: true,
+}">
       <SwiperSlide><img
           src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/336891575_1240432073573017_3181944242916118974_n.jpg?_nc_cat=102&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=LS4fDAxVhTwAX8Ydosy&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfBI8rLT4SYbAkC27LvpEsBta6XnQaMq_cUHOA19niJ-8A&oe=64D66B01">
       </SwiperSlide>
@@ -105,10 +113,13 @@
       <SwiperSlide><img
           src="https://lh3.googleusercontent.com/p/AF1QipPuw1P0XigDQmxM1bXgN0uppwrinq6itgSCLOQx=s680-w680-h510">
       </SwiperSlide>
+      <SwiperSlide><img
+          src="https://lh3.googleusercontent.com/p/AF1QipPWRLo4RAPLLbs-M2Gf5TPC4LKh6a4rSJGOjiAM=s680-w680-h510">
+      </SwiperSlide>
     </swiper>
   </div>
 
-  <h1 class="text-center mb-3">INFORMATION</h1>
+  <h1 class="text-center mb-3 mt-10">INFORMATION</h1>
   <v-container class="homeInformation2">
     <v-row class="homeInformation2Row">
       <v-col class="homeInformation2Col">
@@ -143,7 +154,8 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/effect-fade'
-import { EffectFade, Pagination, Navigation } from 'swiper/modules'
+import 'swiper/css/scrollbar'
+import { Autoplay, EffectFade, Pagination, Navigation, Scrollbar } from 'swiper/modules'
 import GoogleMap from '@/components/GoogleMap.vue'
 
 export default {
@@ -158,7 +170,7 @@ export default {
   },
   setup() {
     return {
-      modules: [EffectFade, Pagination, Navigation]
+      modules: [Autoplay, EffectFade, Pagination, Navigation, Scrollbar]
     }
   }
 }

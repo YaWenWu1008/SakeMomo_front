@@ -6,7 +6,8 @@
       </v-col>
       <v-divider></v-divider>
       <v-col class="text-center">
-        <h4>若需取消訂位，請聯絡我們 02 2703 7507</h4>
+        <p>店家確認訂位後，訂位確認會顯示 true</p>
+        <p>若需取消訂位，請聯絡我們 02 2703 7507</p>
       </v-col>
       <v-col cols="12">
         <v-table>

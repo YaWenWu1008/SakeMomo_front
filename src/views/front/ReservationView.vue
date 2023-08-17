@@ -4,7 +4,7 @@
   </div>
   <v-container>
     <v-row class="reservationRow">
-      <v-col class="text-center mb-4">
+      <v-col class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
         <p>您可以透過電話或網路平台預約</p>
         <p>請您填寫完整的資訊，送出之後將有專人聯絡您，確認後將會在『會員資料』中的「我的訂位」顯示訂位成功。</p>
         <p>店內還有包廂可做預訂，若有需要請電洽 02 2703 7507</p>
@@ -42,6 +42,8 @@ import * as yup from 'yup'
 import { apiAuth } from '@/plugins/axios'
 import { useSnackbar } from 'vuetify-use-dialog'
 import { useRouter } from 'vue-router'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const createSnackbar = useSnackbar()
 const router = useRouter()
@@ -101,5 +103,7 @@ const submit = handleSubmit(async (values) => {
 const peopleNumberOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 const startTime = ref({ hours: 18, minutes: 0 })
+
+AOS.init()
 
 </script>

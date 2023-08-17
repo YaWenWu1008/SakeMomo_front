@@ -1,5 +1,5 @@
 <template>
-  <div class="contactImg">
+  <div class="centerImg">
     <h1>會員中心</h1>
   </div>
   <v-container>

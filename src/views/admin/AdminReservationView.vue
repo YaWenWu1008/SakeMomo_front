@@ -9,7 +9,6 @@
         <v-table>
           <thead>
             <tr>
-              <th>ID</th>
               <th>姓名</th>
               <th>手機號碼</th>
               <th>人數</th>
@@ -19,7 +18,6 @@
           </thead>
           <tbody>
             <tr v-for="reservation in reservations" :key="reservation._id">
-              <td>{{ reservation._id }}</td>
               <td>{{ reservation.name }}</td>
               <td>{{ reservation.phoneNumber }}</td>
               <td>{{ reservation.peopleNumber }}</td>

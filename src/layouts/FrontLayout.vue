@@ -3,8 +3,8 @@
     <v-app-bar color="#863436">
       <v-container class="d-flex align-center">
         <v-btn to="/" :active="false">
-          <v-img src="../assets/logo.png" :width="40"></v-img>
-          <p class="ml-4">酒桃</p>
+          <v-img src="../assets/logosake2.png" :width="45" class="barlogo"></v-img>
+          <!-- <p class="ml-4">酒桃</p> -->
         </v-btn>
         <v-spacer></v-spacer>
         <v-btn v-for="barItem in barItems" :key="barItem.to" :to="barItem.to">{{ barItem.text }}</v-btn>
@@ -84,7 +84,7 @@ const drawer = ref(false)
 
 const barItems = [
   { to: '/aboutus', text: '關於我們' },
-  { to: '/menu', text: 'MENU' },
+  { to: '/menu', text: '菜單' },
   { to: '/contact', text: '聯絡我們' }
 ]
 
@@ -92,8 +92,8 @@ const navItems = [
   { to: '/register', text: '註冊', icon: 'mdi-account-plus', show: !isLogin.value },
   { to: '/login', text: '登入', icon: 'mdi-login', show: !isLogin.value },
   { to: '/reservation', text: '訂位', icon: 'mdi-calendar-check', show: isLogin.value },
-  { to: '/admin', text: '管理', icon: 'mdi-cog', show: isLogin.value && isAdmin.value },
-  { to: '/userCenter', text: '會員中心', icon: 'mdi-cog', show: isLogin.value }
+  { to: '/userCenter', text: '會員中心', icon: 'mdi-account', show: isLogin.value },
+  { to: '/admin', text: '管理', icon: 'mdi-cog', show: isLogin.value && isAdmin.value }
 ]
 
 const logout = async () => {

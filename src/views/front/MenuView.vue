@@ -21,7 +21,7 @@
         <h2>開胃小食</h2>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '開胃小食'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '開胃小食'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -30,7 +30,7 @@
         <h2>生食 & 沙拉</h2>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '生食&沙拉'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '生食&沙拉'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -39,7 +39,7 @@
         <h2>酒桃塔可</h2>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '酒桃塔可'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '酒桃塔可'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -48,7 +48,7 @@
         <h2>燒物</h2>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '燒物'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '燒物'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -57,7 +57,7 @@
         <h2>揚物</h2>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '揚物'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '揚物'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -66,7 +66,7 @@
         <h2>食事 & 吸物</h2>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '食事&吸物'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '食事&吸物'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -75,7 +75,7 @@
         <h2>甜點</h2>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '甜點'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '甜點'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -84,7 +84,7 @@
         <h2>夜場限定</h2>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '夜場限定'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '夜場限定'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -93,7 +93,7 @@
         <h1>酒</h1>
       </v-col>
       <template v-for="product in products" :key="product._id">
-        <v-col cols="12" md="6" lg="3" v-if="product.category === '酒'">
+        <v-col cols="12" md="6" lg="3" v-if="product.category === '酒'" data-aos="fade-up" data-aos-duration="1000">
           <ProductCard v-bind="product"></ProductCard>
         </v-col>
       </template>
@@ -106,10 +106,14 @@ import { api } from '@/plugins/axios'
 import { ref } from 'vue'
 import { useSnackbar } from 'vuetify-use-dialog'
 import ProductCard from '@/components/ProductCard'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const createSnackbar = useSnackbar()
 
-const products = ref([]);
+const products = ref([])
+
+AOS.init();
 
 (async () => {
   try {
