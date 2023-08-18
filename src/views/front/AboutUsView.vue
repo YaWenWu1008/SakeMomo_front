@@ -21,7 +21,7 @@
   </v-container>
 
   <v-container>
-    <v-row class="text-center">
+    <v-row class="text-center aboutRow">
       <v-col class="aboutCol2">
         <h1>來店須知</h1>
         <p data-aos="fade-up" data-aos-duration="1000">

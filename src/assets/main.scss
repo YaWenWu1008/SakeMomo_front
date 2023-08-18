@@ -63,7 +63,7 @@
 }
 
 .space {
-  height: 10%;
+  height: 5%;
   width: 100%;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .homeInformation {
-  margin-bottom: 100px;
+  margin-bottom: 20%;
 
   img {
     width: 100%;
@@ -136,7 +136,11 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+}
 
+.aboutRow {
+  display: flex;
+  flex-direction: column;
 }
 
 .aboutCol {
@@ -286,6 +290,11 @@
 
 // 大版
 @media(min-width:961px) {
+  .aboutRow {
+    display: flex;
+    flex-direction: row;
+  }
+
   .swiper2 {
     display: none;
   }

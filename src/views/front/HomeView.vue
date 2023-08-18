@@ -19,7 +19,7 @@
     </v-row>
   </v-container>
   <div class="space"></div>
-  <v-container-fliud class="homeInformation text-center">
+  <v-container-fliud class="homeInformation text-center mb-9">
     <v-row class="homeInformationRow">
       <v-col cols="12" md="6">
         <img src="../../assets/sake.webp" class="image1" data-aos="flip-left" data-aos-easing="ease-in-sine"
@@ -53,8 +53,8 @@
       </v-col>
     </v-row>
   </v-container-fliud>
-
-  <h1 class="text-center mb-3 ">SAKE MOMO</h1>
+  <div class="space"></div>
+  <h1 class="text-center mb-3 mt-9">SAKE MOMO</h1>
 
   <div class="swiper1">
     <swiper ref="{swiperRef}" :slidesPerView="3" :centeredSlides="true" :spaceBetween="100" :navigation="true"
@@ -118,6 +118,7 @@
       </SwiperSlide>
     </swiper>
   </div>
+  <div class="space"></div>
 
   <h1 class="text-center mb-3 mt-10">INFORMATION</h1>
   <v-container class="homeInformation2">
