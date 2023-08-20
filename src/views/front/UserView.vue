@@ -7,17 +7,17 @@
       <v-divider></v-divider>
       <v-col cols="12">
         <v-table>
-          <thead>
-            <tr>
-              <th>帳號</th>
-              <th>e-mail</th>
-              <th>手機號碼</th>
-            </tr>
-          </thead>
           <tbody>
             <tr>
+              <td><strong>帳號</strong></td>
               <td>{{ account }}</td>
+            </tr>
+            <tr>
+              <td><strong>e-mail</strong></td>
               <td>{{ email }}</td>
+            </tr>
+            <tr>
+              <td><strong>手機號碼</strong></td>
               <td>{{ phoneNumber }}</td>
             </tr>
           </tbody>
