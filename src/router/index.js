@@ -63,7 +63,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "contact" */ '@/views/front/ContactView.vue'),
         meta: {
           title: '酒桃 Sakemomo | 聯絡我們',
-          login: true,
+          login: false,
           admin: false
         }
       },
@@ -90,7 +90,7 @@ const routes = [
       {
         path: 'userView',
         name: 'userView',
-        component: () => import(/* webpackChunkName: "userView" */ '@/views/front/userView.vue'),
+        component: () => import(/* webpackChunkName: "userView" */ '@/views/front/UserView.vue'),
         meta: {
           title: '酒桃 Sakemomo | 會員資料',
           login: true,

@@ -8,7 +8,7 @@ export const useUserStore = defineStore('user', () => {
   const account = ref('')
   const email = ref('')
   const phoneNumber = ref('')
-  const reservation = ref({})
+  const reservation = ref([])
   const role = ref(UserRole.USER)
 
   const login = (data) => {

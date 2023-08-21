@@ -59,7 +59,7 @@
 
 <script setup>
 // import { apiAuth } from '@/plugins/axios'
-import { ref } from 'vue'
+// import { ref } from 'vue'
 // import { useSnackbar } from 'vuetify-use-dialog'
 import { useUserStore } from '@/store/user'
 import { storeToRefs } from 'pinia'
@@ -68,8 +68,8 @@ const user = useUserStore()
 const { account, email, phoneNumber } = storeToRefs(user)
 // const createSnackbar = useSnackbar()
 
-const editedUser = ref({})
-const editUserDialog = ref(false)
+// const editedUser = ref({})
+// const editUserDialog = ref(false)
 
 // const showDialog = (user) => {
 //   editedUser.value = { ...user }
