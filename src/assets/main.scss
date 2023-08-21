@@ -1,14 +1,32 @@
+h1 {
+  letter-spacing: 3px;
+}
+
+p {
+  letter-spacing: 3px;
+}
+
+span {
+  letter-spacing: 2px;
+}
+
 .menu {
-  width: 100%;
-  justify-content: center;
-  // flex-direction: column;
-  text-align: center;
+  width: 90%;
+  font-size: 14px;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0px auto;
 
   a {
     text-decoration: none;
     color: whitesmoke;
-    padding-right: 25px;
+    padding: 0px 10px;
     cursor: pointer;
+    writing-mode: vertical-lr;
+
+    &:hover {
+      color: #989898;
+    }
   }
 }
 
@@ -19,7 +37,6 @@
 }
 
 .SakeFooter {
-  // background: #863436;
   bottom: 0;
   left: 0;
   right: 0;
@@ -51,6 +68,20 @@
       text-decoration: none;
       color: white;
       margin: 10px;
+
+      &:hover {
+        color: #ac9d9d;
+      }
+    }
+
+    .mdi-instagram {
+      text-decoration: none;
+      color: white;
+      margin: 10px;
+
+      &:hover {
+        color: #989898;
+      }
     }
   }
 }
@@ -94,6 +125,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 3px;
   }
 
 }
@@ -141,6 +173,7 @@
 .aboutRow {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10%;
 }
 
 .aboutCol {
@@ -194,13 +227,17 @@
 .contactRow {
   text-align: center;
   margin-bottom: 60px;
-  font-size: 20px;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 2rem;
 }
 
 .contactRow2 {
   text-align: center;
   margin-bottom: 50px;
-  font-size: 18px;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 2rem;
 }
 
 
@@ -303,6 +340,21 @@
 
 // 大版
 @media(min-width:961px) {
+  .menu {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+      padding-right: 20px;
+      cursor: pointer;
+      writing-mode: horizontal-tb;
+    }
+  }
+
   .aboutRow {
     display: flex;
     flex-direction: row;
