@@ -4,7 +4,6 @@
       <v-container class="d-flex align-center">
         <v-btn to="/" :active="false">
           <v-img src="../assets/logosake2.png" :width="45" class="barlogo"></v-img>
-          <!-- <p class="ml-4">酒桃</p> -->
         </v-btn>
         <v-spacer></v-spacer>
         <v-btn v-for="barItem in barItems" :key="barItem.to" :to="barItem.to">{{ barItem.text }}</v-btn>
@@ -88,13 +87,15 @@ const barItems = [
   { to: '/contact', text: '聯絡我們' }
 ]
 
-const navItems = [
-  { to: '/register', text: '註冊', icon: 'mdi-account-plus', show: !isLogin.value },
-  { to: '/login', text: '登入', icon: 'mdi-login', show: !isLogin.value },
-  { to: '/reservation', text: '訂位', icon: 'mdi-calendar-check', show: isLogin.value },
-  { to: '/userCenter', text: '會員中心', icon: 'mdi-account', show: isLogin.value },
-  { to: '/admin', text: '管理', icon: 'mdi-cog', show: isLogin.value && isAdmin.value }
-]
+const navItems = computed(() => {
+  return [
+    { to: '/register', text: '註冊', icon: 'mdi-account-plus', show: !isLogin.value },
+    { to: '/login', text: '登入', icon: 'mdi-login', show: !isLogin.value },
+    { to: '/reservation', text: '訂位', icon: 'mdi-calendar-check', show: isLogin.value },
+    { to: '/userCenter', text: '會員中心', icon: 'mdi-account', show: isLogin.value },
+    { to: '/admin', text: '管理', icon: 'mdi-cog', show: isLogin.value && isAdmin.value }
+  ]
+})
 
 const logout = async () => {
   try {
