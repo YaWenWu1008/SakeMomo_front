@@ -1,23 +1,23 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" class="text-center">
+      <v-col cols="12" class="text-center mb-10">
         <h1>我的訂位</h1>
       </v-col>
-      <v-divider></v-divider>
-      <v-col class="text-center">
+      <!-- <v-divider></v-divider> -->
+      <v-col class="text-center mt-16 mb-10">
         <p>店家確認訂位後，訂位確認會顯示 true</p>
         <p>若需取消訂位，請聯絡我們 02 2703 7507</p>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" class="mt-16 mb-10">
         <v-table>
           <thead>
             <tr>
-              <th>姓名</th>
-              <th>手機號碼</th>
-              <th>人數</th>
-              <th>日期時間</th>
-              <th>訂位確認</th>
+              <th><strong>姓名</strong></th>
+              <th><strong>手機號碼</strong></th>
+              <th><strong>人數</strong></th>
+              <th><strong>日期時間</strong></th>
+              <th><strong>訂位確認</strong></th>
             </tr>
           </thead>
           <tbody>
