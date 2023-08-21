@@ -39,7 +39,9 @@
     </v-navigation-drawer>
 
     <v-main>
-      <router-view></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
     </v-main>
 
     <v-footer fixed class="SakeFooter" style="background-color: #863436;">

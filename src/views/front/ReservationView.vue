@@ -10,7 +10,7 @@
         <p>店內還有包廂可做預訂，若有需要請電洽 02 2703 7507</p>
       </v-col>
       <v-col>
-        <v-sheet width="70%" class="mx-auto mb-9">
+        <v-sheet width="70%" class="mx-auto reservationForm">
           <VForm :disabled="isSubmitting" @submit.prevent="submit">
             <VTextField v-model="name.value.value" :error-messages="name.errorMessage.value" label="姓名" counter
               maxlength="20"></VTextField>

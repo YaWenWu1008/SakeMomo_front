@@ -51,7 +51,7 @@ span {
   }
 
   img {
-    width: 15%;
+    width: 50%;
   }
 
   a {
@@ -234,10 +234,14 @@ span {
 
 .contactRow2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   font-size: 16px;
   letter-spacing: 3px;
   line-height: 2rem;
+}
+
+.reservationForm {
+  margin-bottom: 100px;
 }
 
 
@@ -376,6 +380,12 @@ span {
     }
   }
 
+  .SakeFooter {
+    img {
+      width: 20%;
+    }
+  }
+
   .userview {
     display: flex;
     flex-direction: row;
@@ -385,4 +395,14 @@ span {
     justify-content: center;
     align-items: center;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.8s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
