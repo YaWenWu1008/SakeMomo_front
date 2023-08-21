@@ -43,7 +43,7 @@
       <router-view></router-view>
     </v-main>
 
-    <v-footer fixed class="SakeFooter">
+    <v-footer fixed class="SakeFooter" style="background-color: #863436;">
       <v-row class="justify-space-between">
         <v-col class="footerFollow">
           <h4>FOLLOW US</h4>
