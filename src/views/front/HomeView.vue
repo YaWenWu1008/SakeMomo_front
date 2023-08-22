@@ -131,15 +131,15 @@
     <v-row class="homeInformation2Row">
       <v-col class="homeInformation2Col">
         <span>ADDRESS</span>
-        <span>台北市大安區光復南路456巷6號</span>
+        <span data-aos="fade-up" data-aos-duration="1000">台北市大安區光復南路456巷6號</span>
       </v-col>
       <v-col class="homeInformation2Col">
         <span>TEL</span>
-        <span>02 2703 7507</span>
+        <span data-aos="fade-up" data-aos-duration="1000">02 2703 7507</span>
       </v-col>
       <v-col class="homeInformation2Col">
         <span>OPEN</span>
-        <div class="homeTime">
+        <div class="homeTime" data-aos="fade-up" data-aos-duration="1000">
           <span>FRI-SAT : 18:00 ~ 1:00</span>
           <span>SUN-THU : 18:00 ~ 00:00</span>
         </div>

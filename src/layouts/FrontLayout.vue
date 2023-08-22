@@ -53,7 +53,7 @@
           <a href="https://www.instagram.com/sakemomobistro/" target="_blank"><v-icon icon="mdi-instagram"></v-icon></a>
         </v-col>
         <v-col>
-          <a href="/"><img src="../assets/sakelogo.png"></a>
+          <router-link to="/"><img src="../assets/sakelogo.png"></router-link>
         </v-col>
         <v-col>
           <v-btn variant="text" fab bottom right @click="scrollToTop">

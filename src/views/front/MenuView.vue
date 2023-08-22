@@ -98,6 +98,9 @@
         </v-col>
       </template>
     </v-row>
+    <v-col class="text-center">
+      <v-btn to="/reservation" color="secondary">立即訂位</v-btn>
+    </v-col>
   </v-container>
 </template>
 
