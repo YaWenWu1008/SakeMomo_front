@@ -1,7 +1,7 @@
 <template>
   <v-card height="500">
     <v-img :src="image" cover height="350"></v-img>
-    <VCardTitle class="text-white text-decoration-none text-center">
+    <VCardTitle class="text-white text-decoration-none text-center font-weight-bold">
       {{ name }}
     </VCardTitle>
     <v-card-subtitle class="text-center">${{ price }}</v-card-subtitle>

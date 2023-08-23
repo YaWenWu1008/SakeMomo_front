@@ -68,7 +68,6 @@ const peopleNumber = useField('peopleNumber')
 const dateTime = useField('dateTime')
 
 const submit = handleSubmit(async (values) => {
-  console.log(123)
   try {
     await apiAuth.post('/reservation', {
       name: values.name,
@@ -85,7 +84,7 @@ const submit = handleSubmit(async (values) => {
         location: 'bottom'
       }
     })
-    router.push('/')
+    router.push('/userReservation')
   } catch (error) {
     console.log(error)
     createSnackbar({

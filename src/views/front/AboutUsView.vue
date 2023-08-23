@@ -1,5 +1,7 @@
 <template>
-  <div class="aboutImg">關於我們</div>
+  <div class="aboutImg">
+    <h1>關於我們</h1>
+  </div>
   <v-container>
     <v-row>
       <v-col class="aboutCol homeText" data-aos="fade-up" data-aos-duration="1000">
