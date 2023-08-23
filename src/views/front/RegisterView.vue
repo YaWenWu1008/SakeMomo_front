@@ -1,12 +1,11 @@
 <template>
+  <div class="reservationImg">
+    <h1>加入我們</h1>
+  </div>
   <v-container>
     <v-row>
-      <v-col cols="12">
-        <h1>註冊</h1>
-      </v-col>
-      <v-divider></v-divider>
       <v-col>
-        <v-sheet width="300" class="mx-auto">
+        <v-sheet width="300" class="mx-auto mb-10">
           <v-form :disabled="isSubmitting" @submit.prevent="submit">
             <v-text-field v-model="account.value.value" :error-messages="account.errorMessage.value" label="帳號" counter
               maxlength="20"></v-text-field>

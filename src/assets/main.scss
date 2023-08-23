@@ -334,6 +334,33 @@ span {
   color: #989898;
 }
 
+.dp__action_select {
+  background: #863436 !important;
+  color: var(--dp-primary-text-color);
+}
+
+.dp__active_date {
+  background: #863436 !important;
+  color: var(--dp-primary-text-color);
+}
+
+.dp__today {
+  border: 1px solid #863436 !important;
+}
+
+.dp__action_cancel {
+  color: var(--dp-text-color);
+  border: 1px solid #863436 !important;
+}
+
+.dp__overlay_cell_active {
+  cursor: pointer;
+  border-radius: var(--dp-border-radius);
+  text-align: center;
+  background: #863436 !important;
+  color: var(--dp-primary-text-color);
+}
+
 // 小版
 @media(max-width:960px) {
   .swiper1 {

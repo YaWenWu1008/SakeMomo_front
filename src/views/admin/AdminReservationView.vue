@@ -6,7 +6,7 @@
       </v-col>
       <v-divider></v-divider>
       <v-col cols="12">
-        <v-table>
+        <v-table hover>
           <thead>
             <tr>
               <th>姓名</th>
@@ -58,7 +58,6 @@ const updateConfirmation = async (reservationId, confirmed) => {
         }
       })
 
-      // 更新客户端的预订数据，以反映最新的确认状态
       const updatedReservation = reservations.value.find(r => r._id === reservationId)
       if (updatedReservation) {
         updatedReservation.confirmed = confirmed

@@ -6,10 +6,10 @@
       </v-col>
       <v-divider></v-divider>
       <v-col cols="12">
-        <v-table>
+        <v-table hover>
           <thead>
             <tr>
-              <th>id</th>
+              <th>ID</th>
               <th>帳號</th>
               <th>信箱</th>
               <th>手機號碼</th>
